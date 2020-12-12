@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Loja de Veiculo</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="./estatico/css/estilo.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <main class="container-fluid p-0 d-flex" id="wrapper">
+
+    <section class="col-lg-2 col-md-2 p-0 m-0" >
+      
+      <article class="border-right sticky-top" id="sidebar-wrapper">  
+
+          <nav class="list-group list-group-flush">
+            
+            <a class="nav_logo mt-4">
+              <img src="./../../estatico/imgs/logo.png">
+            </a>
+
+
+            <a href="./funcionarios" class="nav_link">   
+              <h6 class="nav-nome mt-1">Lista de Funcionários</h6>
+            </a>
+
+            <a href="./funcionarios/form" class="nav_link">
+              <h6 class="nav-nome mt-1">Cadastrar Funcionário</h6>
+            </a>
+
+            <a href="./produtos" class="nav_link">
+              <h6 class="nav-nome mt-1">Lista de Veiculos</h6>
+            </a>
+
+            <a href="./produtos/form" class="nav_link">
+              <h6 class="nav-nome mt-1">Cadastrar Veiculos</h6>
+            </a>
+
+          </nav>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="rodape">Desenvolvido pela Equipe 9; Yuri,Gabriel,Mateus,Rafael,Robson.</footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  
+  <script>
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>

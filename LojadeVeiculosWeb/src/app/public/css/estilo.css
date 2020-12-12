@@ -1,0 +1,176 @@
+:root{
+  --header-height: 3rem;
+  --nav-width: 68px;
+
+  --first-color: #ffa66a;
+  --first-color-light: #7AA2DF;
+  --white-color: #F7F6FB;
+
+  --body-font: "Nunito", sans-serif;
+  --normal-font-size: 1rem;
+
+  --z-fixed: 100;
+}
+
+
+ #wrapper {
+    overflow-x: hidden;
+ }
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  background-color:hsl(19, 100%, 71%) ;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+.menu-expand{
+  display: none;
+}
+
+.nav_logo, .nav_link{
+  grid-template-columns: max-content max-content;
+  margin-right: 5px;
+  align-items: center;
+  column-gap: 1rem;
+  padding: .5rem 0 .5rem 1.5rem;
+}
+
+.nav_logo{
+  margin-bottom: 2rem;
+}
+
+.nav_logo-icon{
+  font-size: 1.55rem;
+  color: var(--white-color);
+}
+
+.nav_logo-nome{
+  color: var(--white-color);
+  font-weight: 700;
+}
+
+.nav_link{
+  position: relative;
+  color: #5c5c5c;
+  transition: .3s;
+}
+
+.active{
+  color: var(--white-color);
+}
+
+.active::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 3px;
+  height: 32px;
+  background-color: var(--white-color);
+
+}
+.crud_tr{
+  background-color: var(--first-color);
+}
+
+
+.nav_link:hover{
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.rodape {
+  background-color: #000;
+  color: #F2FFFC;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+#valor{
+  width: 60px;  
+}
+
+
+@media (min-width: 768px){
+
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+
+
+}
+
+@media (max-width: 768px){
+  .menu-expand{
+    display: block;
+  }
+}
+
+/**
+* @desc: estilos dos ícones da nav bar.
+**/
+@media all {
+  .nav_logo img{
+    max-height: 100px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+  }
+  
+  .logo--list img {
+    height: 100px !important;
+  }
+
+  .logo--parking {
+    height: 100px !important;
+  }
+
+  .logo--user {
+    height: 100px !important;
+  }
+}
+
+/**
+* @desc: estilos do menu de navegação para mobile
+**/
+@media screen and (max-width: 640px) {
+  #sidebar-wrapper {
+    display: none;
+    box-shadow: -2px 0px 4px 2px rgba(0,0,0,0.3);
+  }
+}
+
+@media screen and (min-width: 768px) { 
+  #header {
+    display: none !important;
+  }
+}
